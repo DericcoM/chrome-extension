@@ -74,7 +74,7 @@ Start the server
 | `email`   | `string` | **Required**. User Email                      |
 | `password`| `string` | **Required**. Password of user, argon2 hashed |
 | `accessToken`| `string` | **Response**. Access JWT token |
-| `refreshToken`| `string` |**Response**.  Access JWT token |
+| `refreshToken`| `string` |**Response**.  Refresh JWT token |
 
 
 ## Feedback
