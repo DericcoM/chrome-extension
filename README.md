@@ -30,7 +30,7 @@ Install dependencies
   npm install
 ```
 
-Install tables to database
+Install tables to database (you need to install PostgreSQL)
 
 ```bash
   npx prisma db push
@@ -42,3 +42,41 @@ Start the REST API server
   npm run start:dev
 ```
 
+Go to the react directory
+
+```bash
+  cd front-end-diary
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+## API Login Reference
+
+#### login user
+
+```http
+  POST /api/auth/login
+```
+
+| Parameter | Type     | Description                                   |
+| :-------- | :------- | :---------------------------------------------|
+| `id`      | `integer`| **Required**.  Id of user to fetch            |
+| `email`   | `string` | **Required**. User Email                      |
+| `password`| `string` | **Required**. Password of user, argon2 hashed |
+| `accessToken`| `string` | **Response**. Access JWT token |
+| `refreshToken`| `string` |**Response**.  Access JWT token |
+
+
+## Feedback
+
+If you have any feedback, please reach out to me.
