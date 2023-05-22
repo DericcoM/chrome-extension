@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "My React Extension",
+  "version": "1.0",
+  "description": "This is a demo extension for a React application",
+  "icons": {
+    "16": "logo192.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "My React Extension"
+  },
+  "permissions": ["tabs", "activeTab", "<all_urls>", "contextMenus"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

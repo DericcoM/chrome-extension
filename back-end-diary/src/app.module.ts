@@ -1,0 +1,17 @@
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { AuthModule } from './auth/auth.module';
+import { EntryController } from './entry/entry.controller';
+import { EntryModule } from './entry/entry.module';
+import { EntryService } from './entry/entry.service';
+import { PrismaService } from './prisma.service';
+import { UserModule } from './user/user.module';
+
+@Module({
+  imports: [ConfigModule.forRoot(), AuthModule, UserModule, EntryModule],
+  controllers: [AppController, EntryController],
+  providers: [AppService, EntryService, PrismaService],
+})
+export class AppModule {}
